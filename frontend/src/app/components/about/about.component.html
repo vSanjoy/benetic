@@ -1,0 +1,68 @@
+<app-header></app-header>
+<div class="about_banner text-center">
+	<div class="container">
+		<h3 [innerHTML]="pageDetails.banner_title"></h3>
+		<h2 [innerHTML]="pageDetails.banner_short_title"></h2>
+		<p [innerHTML]="pageDetails.banner_short_description"></p>
+		<div class="btn_holder_inline">
+			<a href="javascript:void(0);" class="btn_demo waves-effect" data-toggle="modal" data-target="#demomodal">Demo</a>
+			<a href="javascript:void(0);" class="btn_signup waves-effect" data-toggle="modal" data-target="#signupmodal">Sign up</a>
+		</div>
+	</div>
+	<div class="partition_1"><img src="assets/images/partition_2.png" alt=""></div>
+</div>
+
+<div class="team_section">
+	<div class="container">
+		<div class="row">			
+			<div class="col-xl-4 col-md-6" *ngFor="let teamMember of teamMembers;">
+				<div class="team_box">
+					<div class="team_img"><img src="{{teamMember.image}}" alt=""></div>
+					<div class="team_details_summery">
+						<div class="team_name_sum">
+							<h3>{{teamMember.name}} <span>{{teamMember.designation}}</span></h3>
+						</div>
+						<div class="team_social" *ngIf="teamMember.linkedin_link"><a href="{{teamMember.linkedin_link}}" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></div>
+					</div>
+					<div class="team_box_details">						
+						<div class="team_details_summery">
+							<div class="team_name_sum">
+								<h3>{{teamMember.name}} <span>{{teamMember.designation}}</span></h3>
+							</div>
+							<div class="team_social" *ngIf="teamMember.linkedin_link"><a href="{{teamMember.linkedin_link}}" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></div>
+						</div>
+						<div class="scroll_section">
+							<p [innerHTML]="teamMember.short_description"></p>
+						</div>
+					</div>
+				</div>
+			</div>			
+		</div>
+	</div>
+</div>
+
+<div class="section_4">
+	<div class="partition_3"><img src="assets/images/partition_1.png" alt=""></div>
+	<div class="section_4_content">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-6 order-lg-2">
+					<img src="{{detailsImage1}}" alt="">
+				</div>
+				<div class="col-lg-6">
+					<div class="sec_4_cn">
+						<div [innerHTML]="pageDetails.description"></div>
+						<div class="btn_holder_inline">
+							<a href="javascript:void(0);" class="btn_demo waves-effect" data-toggle="modal" data-target="#demomodal">Demo</a>
+							<a [routerLink]="['/platform']" class="btn_learnmore waves-effect">Learn More</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="partition_4"><img src="assets/images/partition_3.png" alt=""></div>
+</div>
+
+<app-popup></app-popup>
+<app-footer></app-footer>

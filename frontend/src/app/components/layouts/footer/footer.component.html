@@ -1,0 +1,109 @@
+<div class="section_5">
+	<div class="container">
+		<h2><img src="assets/images/bt_logo.png" alt="" ><span [innerHTML]="footerDetails.learn_more_video_short_title"></span></h2>
+		<div class="video_player">
+			<div class="video-player-wrapper">
+			  	<vg-player>
+					<vg-overlay-play></vg-overlay-play>
+					<vg-buffering></vg-buffering>
+
+					<vg-scrub-bar>
+						<vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+						<vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
+					</vg-scrub-bar>
+
+					<vg-controls>
+				  		<vg-play-pause></vg-play-pause>
+				  		<vg-playback-button></vg-playback-button>
+
+				  		<vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+
+				  		<vg-scrub-bar style="pointer-events: none;"></vg-scrub-bar>
+
+				  		<vg-time-display vgProperty="left" vgFormat="mm:ss"></vg-time-display>
+				  		<vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+
+				  		<vg-track-selector></vg-track-selector>
+				  		<vg-mute></vg-mute>
+				  		<vg-volume></vg-volume>
+
+				  		<vg-fullscreen></vg-fullscreen>
+					</vg-controls>
+
+					<video #media [vgMedia]="media" [src]="learnMoreVideoUrl" id="singleVideo" preload="auto" crossorigin></video>
+
+			  	</vg-player>
+			</div>
+		</div>
+		<a href="javascript:void(0);" class="btn_request" data-toggle="modal" data-target="#demomodal">Request A Demo</a>
+	</div>
+</div>
+
+<footer class="footer">
+	<div class="footer_top">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-4">
+					<div class="ft_cn">
+						<div class="foot_logo">
+							<a href="javascript:void(0);">
+								<img src="{{this.footerLogo}}" alt="">
+							</a>
+						</div>
+						<div class="ft_cn">
+							<p [innerHTML]="footerDetails.footer_text"></p>
+							<div class="social">
+								<ul>
+									<li><a href="{{footerDetails.twitter_link}}" target="_blank"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="{{footerDetails.rss_link}}" target="_blank"><i class="fa fa-rss"></i></a></li>
+									<li><a href="{{footerDetails.facebook_link}}" target="_blank"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="{{footerDetails.linkedin_link}}" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-8">
+					<div class="row">
+						<div class="col-lg-4">
+							<div class="ft_nav_holder">
+								<h2><a [routerLink]="['/platform']" routerLinkActive="active">Platform</a></h2>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="ft_nav_holder">
+								<h2>Solutions</h2>
+								<ul>
+									<li><a [routerLink]="['/advisors']" routerLinkActive="active">Advisors</a></li>
+                                	<li><a [routerLink]="['/recordkeepers']" routerLinkActive="active">Recordkeepers</a></li>
+                                	<li><a [routerLink]="['/asset-managers']" routerLinkActive="active">Asset Managers</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="ft_nav_holder">
+								<h2>Company</h2>
+								<ul>
+									<li><a [routerLink]="['/about-us']" routerLinkActive="active">About Us</a></li>
+                                	<li><a href="javascript:void(0);" data-toggle="modal" data-target="#contactourteammodal">Contact Our Team</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer_bottom">
+		<div class="container">
+			<div class="ft_btm_cn">
+				<div class="ft_left">
+					<p><span [innerHTML]="footerDetails.copyright_text"></span> | <a href="javascript:void(0);">Privacy Policy</a></p>
+				</div>
+				<div class="ft_right">
+					<p [innerHTML]="footerDetails.tag_line"></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>

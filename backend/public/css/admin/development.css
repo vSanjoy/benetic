@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');/*font-family: 'Roboto', sans-serif;*/
+#adminLoginForm label.error, #adminForgotPasswordForm label.error, #adminResetPasswordForm label.error {color: #dc3545; font-weight: normal !important; margin-bottom: 0; width: 100%; font-size: 80%;}
+.invalid-feedback{width: 90%; font-size: 12px;}
+.red_star{color: #dc3545;}
+.toast {opacity: 1 !important;}
+.toast-close-button i.fa-times{text-shadow: 0 1px 0 #000; font-size: 14px;}
+
+/* admin login page css start */
+.background-styles{background:url('./../../images/admin/dist/img/background.jpg') no-repeat center; background-size: cover;}
+/* admin login page css ended */
+
+#loading, #dataTableLoading {display: none; width: 100%; height: 100%; top: 0; left: 0; position: fixed; opacity: 0.85; background-color: #fff; cursor: wait; text-align: center; z-index: 9999; }
+#loading-image {position: absolute; top: 45%; z-index: 100;}
+
+.card-header{padding: .1rem 1.25rem;}
+
+.login-card-body .input-group .form-control{border-right: 1px solid #ced4da; border-radius: 0.25rem;}
+.login-card-body .input-group .form-control:focus{border-right: 1px solid #80bdff;}
+.login-card-body .form-control{padding-right: 35px;}
+.form-control-feedback {position: absolute; top: 0; right: 0; z-index: 5; display: block; width: 35px; height: 38px; line-height: 38px; text-align: center; pointer-events: none; font-size: 18px;}
+.notification{position: absolute; top: 0; width: 100%; z-index: 9999;}
+.notification .alert{border-radius: 0;}
+.user-dropdown-section{min-width: 320px;}
+
+/* -------------- Role Permission ----------------- */
+ul,li {list-style: none; padding: 0;}
+.permission-content li {width: 20%;float: left;margin-bottom: 15px;}
+.permission-content li span {margin-left: 0px; font-weight: normal;}
+.permission-title {background: #6c757d; color: #ffffff; padding: 12px; margin-top: 12px; font-weight: 600; overflow: hidden;border-top-left-radius: .25rem; border-top-right-radius: .25rem;}
+.permission-title div {float: right;}
+.permission-title div span {float: right; margin-left: 0px; color: #ffffff; font-weight: normal;}
+.permission-title div input {float: left;}
+.permission-title h2 {margin: 0; font-size: 15px; float: left;font-weight: normal; padding-top: 10px;}
+.permission-content {overflow: hidden; padding: 12px; border: 1px solid #e0e0e0; border-bottom-left-radius: .25rem; border-bottom-right-radius: .25rem;}
+.permission-title .all-select{float: right; margin-left: 0px; color: #212529; font-weight: normal;}
+.add-edit-permission-wrap .col-md-12:last-child {margin-bottom: 12px;}
+.add-edit-permission-wrap>.permission-title {background: #fff}
+.individual_section{padding: 0;}
+/* -------------- Role Permission ----------------- */
+.custom_font{font-size: 15px;}
+.btn-bulkAction{padding: 5px 6px;}
+.custom-padding0{padding: 0 6px;}
+.select2{line-height: 25px;}
+.select2 .select2-selection{min-height: 38px !important;}
+.select2 .select2-selection--single{padding: 0.66875rem .75rem !important;}
+.select2 .selection .select2-selection--single .select2-selection__arrow{top: 2px;}
+
+#list-data .firstColumn {min-width: 40px; width: 40px;}
+#list-data .actions {min-width: 100px; width: 100px;}
+#list-data .row_status {min-width: 48px; width: 48px;}
+#list-data .more_actions {min-width: 110px; width: 110px;}
+
+.margintop10{margin-top: 10px;}
+.marginbottom17{margin-bottom: 17px;}
+.preview_image{background:#7F7F7F; width:100%; padding:50px 58px; height:300px; text-align: center;}
+.preview_image img{border: 2px solid #ffffff;}
+
+.grab {cursor: -webkit-grab; cursor: grab;}
+/* #nestable ol.dd-list{display: flex; flex-wrap: wrap;}
+#nestable ol.dd-list li{-ms-flex: 0 0 50%; flex: 0 0 50%; max-width: 46%; margin: 5px 15px;} */
+#nestable ol.dd-list li {
+    border-radius: .25rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
+    background-color: #fff;
+    margin-bottom: 10px;
+    padding: 2px;
+}
+.radioDefault{padding-left: 35px !important;}
+.radio-holder-default{padding: .25rem 0 !important;}
+.radio-margin{margin: 0 -3px 0 4px !important;}
+.list-image-holder{height: 50px;}
+.service-preview-image{background: #7F7F7F; width: 100%; padding: 8px 2px; text-align: center;}
+.map-search{width: 75%; top: 12px !important;}
+.login-logo, .register-logo{background:#0a0909; margin-bottom: 0; padding-top: 20px;}
+.login-card-body, .register-card-body{background:#0a0909;}
+.login-box-msg{color: #fff;}
+.image_background{width: 60px; padding: 5px; background: #E0F5FA;}
+.image_background_logo{width: 100px; padding: 5px; background: #E0F5FA;}

@@ -1,0 +1,138 @@
+<app-header></app-header>
+<div class="banner_section">
+	<div class="container">
+		<div class="banner_holder">
+			<owl-carousel-o [options]="customOptions">
+
+				<ng-template carouselSlide *ngFor="let banner of banners">
+					<div class="slide">
+						<div class="banner_image">
+								<img src="{{banner.image}}" alt="">
+							</div>
+							<div class="banner_content">
+							<h2 [innerHTML]="banner.title"></h2>
+							<div  [innerHTML]="banner.short_description"></div>
+							<div class="btn_holder_inline">
+								<a href="javascript:void(0);" class="btn_demo waves-effect" data-toggle="modal" data-target="#demomodal">Demo</a>
+								<a href="javascript:void(0);" class="btn_signup waves-effect" data-toggle="modal" data-target="#signupmodal">Sign-up</a>
+							</div>
+						</div>
+					</div>
+				</ng-template>
+			</owl-carousel-o>
+		</div>
+	</div>
+	<div class="partition_1"><img src="assets/images/partition_1.png" alt=""></div>
+</div>
+
+<div class="logo_holder_section">
+	<div class="container">
+		<div class="logo_content">
+			<h2>Join the industry leaders who are already using Benetic</h2>
+			<owl-carousel-o [options]="logosliderOptions">
+				<ng-template carouselSlide *ngFor="let logo of logos">
+					<div class="slide">
+						<img src="{{logo.image}}" alt="{{logo.title}}">
+					</div>
+				</ng-template>
+			</owl-carousel-o>
+		</div>
+	</div>
+</div>
+
+<div class="section_2">
+	<div class="container">
+		<h2 [innerHTML]="homeDetails.short_title"></h2>
+		<div class="section_2_row">
+			<div class="section_2_col_3" *ngFor="let widget of widgets; let i = index;">
+				<div class="section_2_box">
+					<div class="sec_2_icon_holder sec_2_icon_{{i+1}}">
+						<img src="{{widget.home_widget_image}}" alt="">
+					</div>
+					<h3 [innerHTML]="widget.title"></h3>
+					<div [innerHTML]="widget.short_description"></div>
+					<a [routerLink]="widget.slug" class="btn_more waves-effect">More</a>
+				</div>
+			</div>			
+		</div>
+	</div>
+	<div class="section_2_partion">
+		<img src="assets/images/partition_2.png" alt="">
+	</div>
+</div>
+
+<div class="section_3">
+	<div class="container">
+		<div class="sec_3_top">
+			<div class="text-center">
+				<div [innerHTML]="homeDetails.short_description"></div>
+				<div class="btn_holder_inline">
+					<a href="javascript:void(0);" class="btn_demo waves-effect" data-toggle="modal" data-target="#demomodal">Demo</a>
+					<a href="javascript:void(0);" class="btn_signup waves-effect" data-toggle="modal" data-target="#signupmodal">Sign-up</a>
+				</div>
+			</div>
+		</div>
+		<div class="circular_carosel_section">
+			<div class="holderCircle mobile_none">
+				<div class="dotCircle">
+					<ng-container *ngFor="let beneticTurn of beneticTurns; let k=index;">
+						<div *ngIf="k==0;then content else other_content"></div>						
+						<ng-template #content>
+							<span class="itemDot itemDot{{k+1}}" [attr.data-tab]="k+1" [attr.data-goto]="4">
+								<img src="{{beneticTurn.image}}" alt="">
+								<div class="circular_content" [innerHTML]="beneticTurn.title"></div>
+							</span>	
+						</ng-template>						
+						<ng-template #other_content>
+							<div *ngIf="k==3;then content_active else other_content_active"></div>
+							<ng-template #content_active>
+								<span class="itemDot active itemDot{{k+1}}" [attr.data-tab]="k+1" [attr.data-goto]="k">
+									<img src="{{beneticTurn.image}}" alt="">
+									<div class="circular_content" [innerHTML]="beneticTurn.title"></div>
+								</span>
+							</ng-template>
+							<ng-template #other_content_active>
+								<span class="itemDot itemDot{{k+1}}" [attr.data-tab]="k+1" [attr.data-goto]="k">
+									<img src="{{beneticTurn.image}}" alt="">
+									<div class="circular_content" [innerHTML]="beneticTurn.title"></div>
+								</span>
+							</ng-template>							
+						</ng-template>
+					</ng-container>
+				</div>
+			</div>
+			<div class="round_process">
+				<div class="round_pro_box" *ngFor="let bTurn of beneticTurns;">
+					<img src="{{bTurn.image}}" alt="">
+					<div class="circular_content" [innerHTML]="bTurn.title"></div>
+				</div>					
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="section_4">
+	<div class="partition_3"><img src="assets/images/partition_1.png" alt=""></div>
+	<div class="section_4_content">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-6 order-lg-2">
+					<img src="{{homeDetailsImage1}}" alt="">
+				</div>
+				<div class="col-lg-6">
+					<div class="sec_4_cn">
+						<div [innerHTML]="homeDetails.description">	</div>
+						<div class="btn_holder_inline">
+							<a href="javascript:void(0);" class="btn_demo waves-effect" data-toggle="modal" data-target="#demomodal">Demo</a>
+							<a href="javascript:void(0);" class="btn_learnmore waves-effect">Learn More</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="partition_4"><img src="assets/images/partition_3.png" alt=""></div>
+</div>
+
+<app-popup></app-popup>
+<app-footer></app-footer>

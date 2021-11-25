@@ -1,0 +1,93 @@
+<app-header></app-header>
+<div class="banner_platform">
+	<div class="container">
+		<div class="text-center">
+			<h3 [innerHTML]="pageDetails.banner_title"></h3>
+			<h2 [innerHTML]="pageDetails.banner_short_title"></h2>
+			<p [innerHTML]="pageDetails.banner_short_description"></p>
+			<div class="btn_holder_inline">
+				<a href="javascript:void(0);" class="btn_demo waves-effect" data-toggle="modal" data-target="#demomodal">Demo</a>
+				<a href="javascript:void(0);" class="btn_signup waves-effect" data-toggle="modal" data-target="#signupmodal">Sign up</a>
+			</div>
+		</div>
+	</div>
+	<div class="particle_section"><particles [params]="myParams" [style]="myStyle" [width]="width" [height]="height"></particles></div>
+	<div class="partition_5"><img src="assets/images/partition_4.png" alt=""></div>
+</div>
+
+<div class="how_it_works_section">
+	<div class="how_section_content">
+		<div class="container">
+			<div class="container">
+				<div [innerHTML]="pageDetails.short_title"></div>
+				<div class="btn_holder_inline">
+					<a href="javascript:void(0);" class="btn_demo waves-effect" data-toggle="modal" data-target="#demomodal">Demo</a>
+					<a href="javascript:void(0);" class="btn_signup waves-effect" data-toggle="modal" data-target="#signupmodal">Sign up</a>
+				</div>
+			</div> 
+		</div>
+	</div>
+	<div class="how_circular">
+		<div class="holderCircle">
+			<div class="dotCircle">
+				<ng-container *ngFor="let howItWork of howItWorks; let k=index;">
+					<div *ngIf="k==0;then content else other_content"></div>						
+					<ng-template #content>
+						<span class="itemDot itemDot{{k+1}}" [attr.data-tab]="k+1" [attr.data-goto]="4">
+							<img src="{{howItWork.image}}" alt="">
+							<div class="circular_content" [innerHTML]="howItWork.title"></div>
+						</span>	
+					</ng-template>						
+					<ng-template #other_content>
+						<div *ngIf="k==2;then content_active else other_content_active"></div>
+						<ng-template #content_active>
+							<span class="itemDot active itemDot{{k+1}}" [attr.data-tab]="k+1" [attr.data-goto]="k">
+								<img src="{{howItWork.image}}" alt="">
+								<div class="circular_content" [innerHTML]="howItWork.title"></div>
+							</span>
+						</ng-template>
+						<ng-template #other_content_active>
+							<span class="itemDot itemDot{{k+1}}" [attr.data-tab]="k+1" [attr.data-goto]="k">
+								<img src="{{howItWork.image}}" alt="">
+								<div class="circular_content" [innerHTML]="howItWork.title"></div>
+							</span>
+						</ng-template>							
+					</ng-template>
+				</ng-container>
+			</div>
+		</div>
+		<div class="round_process">
+			<div class="round_pro_box" *ngFor="let howItWork of howItWorks;">
+				<img src="{{howItWork.image}}" alt="">
+				<div class="circular_content" [innerHTML]="howItWork.title"></div>
+			</div>			
+		</div>				
+	</div>
+</div>
+
+<div class="section_4">
+	<div class="partition_3"><img src="assets/images/partition_1.png" alt=""></div>
+	<div class="section_4_content">
+		<div class="container">
+			<div class="pt_sec_tp text-center" [innerHTML]="pageDetails.short_description"></div>
+			<div class="row">
+				<div class="col-lg-6 order-lg-2">
+					<div class="ho_img"><img src="{{detailsImage1}}" alt=""></div>
+				</div>
+				<div class="col-lg-6">
+					<div class="sec_4_cn">
+						<div class="list_items" [innerHTML]="pageDetails.description"></div>
+						<div class="btn_holder_inline">
+							<a href="javascript:void(0);" class="btn_demo waves-effect" data-toggle="modal" data-target="#demomodal">Demo</a>
+							<a href="javascript:void(0);" class="btn_learnmore waves-effect">Learn More</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="partition_4"><img src="assets/images/partition_3.png" alt=""></div>
+</div>
+	
+<app-popup></app-popup>
+<app-footer></app-footer>

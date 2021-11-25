@@ -1,0 +1,39 @@
+<header class="header">
+    <div class="container">
+        <div class="header_cn">
+            <div class="logo">
+                <a [routerLink]="['/']"><img src="assets/images/logo.png" alt=""></a>
+            </div>
+            <div class="navigation">
+                <nav>
+                    <ul>
+                        <li><a [routerLink]="['/']"  routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a></li>             
+                        <li><a [routerLink]="['/platform']" routerLinkActive="active">Platform</a></li>             
+                        <li class="dropdown_menu"><a href="javascript:void(0);" routerLinkActive="active">Solutions</a>
+                            <ul>
+                                <li><a [routerLink]="['/advisors']" routerLinkActive="active">Advisors</a></li>
+                                <li><a [routerLink]="['/recordkeepers']" routerLinkActive="active">Recordkeepers</a></li>
+                                <li><a [routerLink]="['/asset-managers']" routerLinkActive="active">Asset Managers</a></li>
+                            </ul>
+                        </li>            
+                        <li class="dropdown_menu"><a href="javascript:void(0);">Company</a>
+                            <ul>
+                                <li><a [routerLink]="['/about-us']" routerLinkActive="active">About Us</a></li>
+                                <li><a href="javascript:void(0);" data-toggle="modal" data-target="#contactourteammodal">Contact Our Team</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header_right">
+                <ul>
+                    <li><a href="https://web.prod.benetic.com/login" target="_blank">Login</a></li>
+                    <li><a href="javascript:void(0);" class="sign_up" data-toggle="modal" data-target="#signupmodal">Sign up</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="small_nav"></div>
+    <div class="clearfix"></div>
+</header>
+<app-popup></app-popup>

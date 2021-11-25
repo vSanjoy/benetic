@@ -1,0 +1,71 @@
+<app-header></app-header>
+<div class="solution_banner">
+	<div class="container">
+		<div class="solution_banner_content">
+			<div class="banner_image"><img src="{{pageBanner}}" alt=""></div>
+			<div class="banner_content">
+				<h3 [innerHTML]="pageDetails.banner_title"></h3>
+				<h2 [innerHTML]="pageDetails.banner_short_title"></h2>
+				<p [innerHTML]="pageDetails.banner_short_description"></p>
+				<div class="btn_holder_inline">
+					<a href="javascript:void(0);" class="btn_demo waves-effect" data-toggle="modal" data-target="#demomodal">Demo</a>
+					<a href="javascript:void(0);" class="btn_signup waves-effect" data-toggle="modal" data-target="#signupmodal">Sign up</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="partition_1"><img src="assets/images/partition_1.png" alt=""></div>
+</div>
+
+<div class="section_2 inner_scroller_section">
+	<div class="inner_cn_nw">
+		<div class="container">
+			<div class="inner_content_holder">
+				<div [innerHTML]="pageDetails.description"></div>
+				<div class="btn_holder_inline">
+					<a href="javascript:void(0);" class="btn_demo waves-effect" data-toggle="modal" data-target="#demomodal">Demo</a>
+					<a href="javascript:void(0);" class="btn_signup waves-effect" data-toggle="modal" data-target="#signupmodal">Sign up</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="inner_mid_carosel">
+		<owl-carousel-o [options]="serviceOptions">
+			<ng-template carouselSlide *ngFor="let benefit of benefits;">
+			    <div class="slide">
+			      <img src="{{benefit.image}}" alt="">
+			      <h3 [innerHTML]="benefit.title"></h3>
+			    </div>
+			</ng-template>
+		</owl-carousel-o>
+	</div>
+	<div class="section_2_partion">
+		<img src="assets/images/partition_2.png" alt="">
+	</div>
+</div>
+<div class="inner_section_3">
+	<div class="container">
+		<div class="pt_sec_tp text-center">
+			<h2 [innerHTML]="widgetDetails.short_title"></h2>
+			<h3 [innerHTML]="widgetDetails.short_description"></h3>
+		</div>
+		<div class="row">
+			<div class="col-lg-6 order-lg-2">
+				<div class="ho_img">
+					<img src="{{widgetImage}}" alt="">
+				</div>
+			</div>
+			<div class="col-lg-6">
+				<div class="list_items" [innerHTML]="widgetDetails.description"></div>
+				<div class="btn_holder_inline">
+					<a href="javascript:void(0);" class="btn_demo waves-effect" data-toggle="modal" data-target="#demomodal">Demo</a>
+					<a href="javascript:void(0);" class="btn_signup waves-effect" data-toggle="modal" data-target="#signupmodal">Sign up</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="partition_6"><img src="assets/images/partition_6.png" alt=""></div>
+</div>
+
+<app-popup></app-popup>
+<app-footer></app-footer>
